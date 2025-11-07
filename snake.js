@@ -49,6 +49,8 @@ apple = {
     //畫蘋果
     drawApple: function () {
         ctx.fillStyle = 'red';
+        ctx.shadowColor = '#ff5555'; // 螢光紅光
+        ctx.shadowBlur = 14;
         ctx.fillRect(
         this.x * BLOCK_SIZE ,
         this.y * BLOCK_SIZE ,
