@@ -16,6 +16,8 @@ snake = {
     drawSnake: function () {
         this.moveSnake();
         ctx.fillStyle='lime';
+        ctx.shadowColor = '#00ff88'; // 螢光綠光
+        ctx.shadowBlur = 12; // 發光半徑
         for (let i=0; i<this.body.length; i++){      
         ctx.fillRect(
         this.body[i].x * BLOCK_SIZE,
