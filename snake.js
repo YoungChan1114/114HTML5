@@ -113,11 +113,11 @@ function eatApple() {
         document.getElementById("scoreBoard").textContent = "Score: " + score;
     }
 }
-//function drawScore() {
-  //  ctx.fillStyle = "white";
-// ctx.font = "10px Verdana";
-//    ctx.fillText("Score " + score, canvas.width - 50, 10);    
-//}
+function drawScore() {
+   ctx.fillStyle = "white";
+   ctx.font = "10px Verdana";
+   ctx.fillText("Score " + score, canvas.width - 50, 10);    
+}
 function checkDeath() {
     // hit walls
     if( (snake.body[0].x < 0) ||
