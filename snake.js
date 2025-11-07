@@ -111,12 +111,21 @@ function eatApple() {
         score++;
         apple.putApple();
         document.getElementById("scoreBoard").textContent = "Score: " + score;
+            // ✅ 更新上方分數區塊
+        const scoreBoard = document.getElementById("scoreBoard");
+        scoreBoard.textContent = "Score: " + score;
+
+        // ✅ 加上閃光動畫
+        scoreBoard.classList.add("flash");
+        setTimeout(() => {
+            scoreBoard.classList.remove("flash");
+        }, 400); // 0.4秒後移除效果
     }
 }
-function drawScore() {
-   ctx.fillStyle = "white";
-   ctx.font = "10px Verdana";
-   ctx.fillText("Score " + score, canvas.width - 50, 10);    
+ function drawScore() {
+     ctx.fillStyle = "white";
+     ctx.font = "10px Verdana";
+     ctx.fillText("Score " + score, canvas.width - 50, 10);    
 }
 function checkDeath() {
     // hit walls
@@ -162,4 +171,3 @@ buttonStart.addEventListener("click", function(){
     initGame();
     gameStart();
 })
-
